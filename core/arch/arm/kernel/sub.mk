@@ -56,6 +56,11 @@ srcs-y += unwind_arm32.c
 srcs-$(CFG_ARM64_core) += unwind_arm64.c
 endif
 
+ifeq ($(CFG_WITH_SPCI),1)
+srcs-y += spci.c
+srcs-$(CFG_ARM64_core) += spci_a64.S
+endif
+
 srcs-y += link_dummies.c
 
 asm-defines-y += asm-defines.c
