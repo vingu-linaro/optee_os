@@ -636,3 +636,8 @@ CFG_COMPAT_GP10_DES ?= y
 
 # Defines a limit for many levels TAs may call each others.
 CFG_CORE_MAX_SYSCALL_RECURSION ?= 4
+
+# Embeds a SCMI server in core with dedicated PTA as interface to
+# non-secure world. Configuration expects a targe so-called product in
+# the SCMI server implmentation thru CFG_SCMI_SERVER_PRODUCT.
+CFG_SCMI_SERVER ?= n
