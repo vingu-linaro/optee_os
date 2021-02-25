@@ -69,6 +69,9 @@ CFG_SHMEM_SIZE   ?= 0x00200000
 # DRAM1 is defined above 4G
 $(call force,CFG_CORE_LARGE_PHYS_ADDR,y)
 $(call force,CFG_CORE_ARM64_PA_BITS,36)
+ifeq ($(CFG_SCMI_SERVER),y)
+$(call force,CFG_SCMI_SERVER_PRODUCT,fvp)
+endif
 endif
 
 ifeq ($(PLATFORM_FLAVOR),juno)
