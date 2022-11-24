@@ -14,6 +14,7 @@ incdirs_ext-y += $(scmi-server-scp-path)/arch/none/optee/include
 scp-firmware-output = $(scmi-server-out-path)/build/product/optee-$(scmi-server-product)/fw/libscmi-fw-all.a
 
 libdeps += $(scp-firmware-output)
+libdeps += out/arm/core-lib/libutils/libutils.a
 cleanfiles += $(scp-firmware-output)
 
 cflags-scmi-server-y = $(cflags-plat-scmi-server-y)
