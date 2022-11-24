@@ -71,6 +71,8 @@ $(call force,CFG_CORE_LARGE_PHYS_ADDR,y)
 $(call force,CFG_CORE_ARM64_PA_BITS,36)
 ifeq ($(CFG_SCMI_SERVER),y)
 $(call force,CFG_SCMI_SERVER_PRODUCT,fvp)
+$(call force,CFG_SCMI_SERVER_SMT_HEADER,n)
+$(call force,CFG_SCMI_SERVER_MSG_HEADER,y)
 endif
 endif
 
